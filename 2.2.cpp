@@ -1,9 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-
+#include<math.h>
 int main()
-{
-    float x, y;
-    scanf_s("%f %f", &x, &y);
-    printf("%.2f %.2f %.2f %.2f", x + y, x - y, x * y, x / y);
-    return 0;
+{	
+	float w, h;
+	scanf("%f %f", &w, &h);
+	float BMI = w / pow(h,2);
+	if (BMI < 18.5)
+	{
+		printf("Underweight");
+	}
+	else if (BMI >= 18.5 && BMI < 24.9)
+	{
+		printf("Normal");
+	}
+	else if (BMI >= 25 && BMI < 29.9)
+	{
+		printf("Overweight");
+	}
+	else if (BMI >= 30)
+	{
+		printf("Obese");
+	}
+	
+	return 0;
 }
